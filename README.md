@@ -1,16 +1,26 @@
 # Urban Routes Automation Project
 
 ## Description
-This project contains automated tests for the Urban Routes application using Selenium WebDriver and Python.
+This project contains automated UI tests for the Urban Routes application using Selenium WebDriver, Pytest, and Python.
 
-The tests simulate a user ordering a taxi, adding a payment method, writing a message for the driver, selecting additional requirements, adding ice cream items, and confirming the order.
+The project validates different user scenarios independently, including:
+- Setting the route
+- Selecting the Comfort tariff
+- Adding a phone number
+- Confirming the verification code
+- Adding a payment card
+- Sending a message to the driver
+- Ordering a blanket and tissues
+- Adding two ice creams
+- Confirming the driver search modal
+
+The project follows the Page Object Model (POM) design pattern to improve code organization and maintainability.
 
 ## Technologies and Techniques Used
 - Python
 - Selenium WebDriver
 - PyCharm
 - Pytest
-- Webdriver Manager
 - Page Object Model (POM)
 - Automated UI Testing
 
@@ -25,9 +35,11 @@ pip install selenium
 pip install pytest
 ```
 
-3. Run the file `main.py` using PyCharm or pytest.
+3. Run the tests using PyCharm or pytest.
 
 ## Project Structure
 - `data.py` → test data
-- `main.py` → test classes and methods
+- `helpers.py` → helper functions
+- `pages.py` → page methods and locators
+- `main.py` → automated tests
 - `README.md` → project documentation
